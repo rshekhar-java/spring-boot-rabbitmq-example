@@ -29,13 +29,13 @@
                 <th>Delete</th>
             </tr>
             <tr th:each="product : ${products}">
-                <td th:text="${product._id.toHexString()}"></td>
+                <td th:text="${product.id.toString()}"></td>
                 <td th:text="${product.description}"></td>
                 <td th:text="${product.price}"></td>
                 <td th:text="${product.imageUrl}"></td>
-                <td><a th:href="${'/product/show/' + product._id.toHexString()}">View</a> </td>
-                <td><a th:href="${'/product/edit/' + product._id.toHexString()}">Edit</a> </td>
-                <td><a th:href="${'/product/delete/' + product._id.toHexString()}">Delete</a> </td>
+                <td><a th:href="${'/product/show/' + product.id.toString()}">View</a> </td>
+                <td><a th:href="${'/product/edit/' + product.id.toString()}">Edit</a> </td>
+                <td><a th:href="${'/product/delete/' + product.id.toString()}">Delete</a> </td>
             </tr>
         </table>
     </div>
